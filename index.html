@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,29 +14,45 @@
 </header>
 
 <nav>
-    <a href="#section1" onclick="changeSection(1)">Лекції</a>
-    <a href="#section2" onclick="changeSection(2)">Лабораторні роботи</a>
-
+    <a href="#section1" onclick="changeSection(1)" style="font-size: 23px;">Лекції</a>
+    <a href="#section2" onclick="changeSection(2)" style="font-size: 23px;">Лабораторні роботи</a>
+    <a href="#section3" onclick="changeSection(3)" style="font-size: 23px;">Література для лабораторних робіт</a>
 </nav>
 
 <section id="section1" class="section">
     <h2>Виберіть лекцію</h2>
     <div class="dropdown">
-        <button class="dropbtn">Вибрати</button>
-        <div class="dropdown-content">
-            <a href="https://docs.google.com/presentation/d/1V29Uw0eavyArHP15a778wCjJebfZC2E9/edit?usp=sharing&ouid=109994466227617248518&rtpof=true&sd=true">Лекція 1</a>
-            <a href="https://docs.google.com/presentation/d/14vx-D_CX7Z4fjE5jTnpaWZfKGbz9onlI/edit?usp=sharing&ouid=109994466227617248518&rtpof=true&sd=true">Лекція 2</a>
-            <a href="https://docs.google.com/presentation/d/1pHeIxRNxisLAWfqz1hXl6ndkeJLkyiwI/edit?usp=sharing&ouid=109994466227617248518&rtpof=true&sd=true">Лекція 2 (частина 2)</a>
-            <a href="https://docs.google.com/presentation/d/1oRWZCL_OTxBboeYxTNqakW1ATtWngx3Z/edit?usp=sharing&ouid=109994466227617248518&rtpof=true&sd=true">Лекція 3</a>
-            <a href="https://docs.google.com/presentation/d/1lQdAWa37H60E0nfAZbaMwj_OoPRMrPH0/edit?usp=sharing&ouid=109994466227617248518&rtpof=true&sd=true">Лекція 3 (частина 2)</a>
-            <a href="https://docs.google.com/presentation/d/1FN_zKCdAft97uT2g8r_T-W8U1NB9C7BG/edit?usp=sharing&ouid=109994466227617248518&rtpof=true&sd=true">Лекція 4</a>
-            <a href="https://docs.google.com/presentation/d/1NgMdNdKbgyKnhC3D3QUdEYTf750WRMHe/edit?usp=sharing&ouid=109994466227617248518&rtpof=true&sd=true">Лекція 5</a>
-            <a href="https://docs.google.com/presentation/d/1n0ncKyBFDHfbsgD6w65oAb-QJdZwlRBm/edit?usp=sharing&ouid=109994466227617248518&rtpof=true&sd=true">Лекція 5 (частина 2)</a>
-            <a href="https://docs.google.com/presentation/d/1Lt8SQulcuxFvKaOY_wQOpylOfFdi7xGX/edit?usp=sharing&ouid=109994466227617248518&rtpof=true&sd=true">Лекція 6</a>
-            <a href="https://docs.google.com/presentation/d/1h8uryU2EZZOozIQ_0uzuHS06me6BV8k-/edit?usp=sharing&ouid=109994466227617248518&rtpof=true&sd=true">Лекція 7</a>
-            <a href="https://docs.google.com/presentation/d/1_GXt6j7lpN3o2HYS-Cy3EXkpXhL34VCn/edit?usp=sharing&ouid=109994466227617248518&rtpof=true&sd=true">Леції 8-9</a>
-            <a href="https://docs.google.com/presentation/d/1M1DvTWnFtsk84R8g_ZJ0oF5y8yZFKBt3/edit?usp=sharing&ouid=109994466227617248518&rtpof=true&sd=true">Лекція 10</a>
+        <button onclick="toggleDropdownLab()" class="dropbtn">Вибрати</button>
+        <div id="myDropdownLab" class="dropdown-content">
+            <a href="https://docs.google.com/presentation/d/1V29Uw0eavyArHP15a778wCjJebfZC2E9/edit?usp=sharing&ouid=109994466227617248518&rtpof=true&sd=true">Загальна характеристика мови програмування С++</a>
+            <a href="https://docs.google.com/presentation/d/14vx-D_CX7Z4fjE5jTnpaWZfKGbz9onlI/edit?usp=sharing&ouid=109994466227617248518&rtpof=true&sd=true">Структура лінійної програми на мові С++</a>
+            <a href="https://docs.google.com/presentation/d/1pHeIxRNxisLAWfqz1hXl6ndkeJLkyiwI/edit?usp=sharing&ouid=109994466227617248518&rtpof=true&sd=true">Типи даних</a>
+            <a href="https://docs.google.com/presentation/d/1oRWZCL_OTxBboeYxTNqakW1ATtWngx3Z/edit?usp=sharing&ouid=109994466227617248518&rtpof=true&sd=true">Математичні та логічні вирази. Масиви.</a>
+            <a href="https://docs.google.com/presentation/d/1lQdAWa37H60E0nfAZbaMwj_OoPRMrPH0/edit?usp=sharing&ouid=109994466227617248518&rtpof=true&sd=true">Оператори консольного вводу/виводу. Оператор розгалуження. Умовний оператор.</a>
+            <a href="https://docs.google.com/presentation/d/1FN_zKCdAft97uT2g8r_T-W8U1NB9C7BG/edit?usp=sharing&ouid=109994466227617248518&rtpof=true&sd=true">Класифікація циклів. Цикли.</a>
+            <a href="https://docs.google.com/presentation/d/1NgMdNdKbgyKnhC3D3QUdEYTf750WRMHe/edit?usp=sharing&ouid=109994466227617248518&rtpof=true&sd=true">Функції складені користувачем. Рекурсія.</a>
+            <a href="https://docs.google.com/presentation/d/1n0ncKyBFDHfbsgD6w65oAb-QJdZwlRBm/edit?usp=sharing&ouid=109994466227617248518&rtpof=true&sd=true">Специфіка виконання різноманітних задач з масивами, векторами</a>
+            <a href="https://docs.google.com/presentation/d/1Lt8SQulcuxFvKaOY_wQOpylOfFdi7xGX/edit?usp=sharing&ouid=109994466227617248518&rtpof=true&sd=true">Оголошення класів.</a>
+            <a href="https://docs.google.com/presentation/d/1h8uryU2EZZOozIQ_0uzuHS06me6BV8k-/edit?usp=sharing&ouid=109994466227617248518&rtpof=true&sd=true">Особливості складання програм з класами на мові С++</a>
+            <a href="https://docs.google.com/presentation/d/1_GXt6j7lpN3o2HYS-Cy3EXkpXhL34VCn/edit?usp=sharing&ouid=109994466227617248518&rtpof=true&sd=true">Особливості складання програм з класами на мові С++, конструкції коду, особливості реалізації
+                принципів ООП
+            </a>
+            <a href="https://docs.google.com/presentation/d/1M1DvTWnFtsk84R8g_ZJ0oF5y8yZFKBt3/edit?usp=sharing&ouid=109994466227617248518&rtpof=true&sd=true">Особливості складання програм з класами на мові С++</a>
         </div>
+        <div class="top-links">
+            <h2>Топ ресурсів для самостійного навчання</h2>
+            <ul>
+                <li><a href="https://www.coursera.org/" target="_blank">Coursera</a> - онлайн-курси з різних тем</li>
+                <li><a href="https://www.codecademy.com/" target="_blank">Codecademy</a> - інтерактивне навчання програмуванню</li>
+                <li><a href="https://www.khanacademy.org/" target="_blank">Khan Academy</a> - освітня платформа з відеоуроками</li>
+                <li><a href="https://www.edx.org/" target="_blank">edX</a> - курси від провідних університетів світу</li>
+                <li><a href="https://www.youtube.com/" target="_blank">YouTube</a> - відеоуроки та навчальний контент</li>
+                <li><a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a> - питання та відповіді з програмування</li>
+                <li><a href="https://developer.mozilla.org/" target="_blank">Mozilla Developer Network (MDN)</a> - ресурс для веб-розробників</li>
+                <li><a href="https://github.com/" target="_blank">GitHub</a> - платформа для хостингу коду та спільної розробки</li>
+            </ul>
+        </div>
+
     </div>
 
 
@@ -46,16 +62,52 @@
 <section id="section2" class="section">
     <h2>Виберіть лабораторну роботу</h2>
     <div class="dropdown">
-        <button class="dropbtn">Вибрати</button>
-        <div class="dropdown-content">
+        <button onclick="toggleDropdown()" class="dropbtn">Вибрати</button>
+        <div id="myDropdown" class="dropdown-content">
             <a href="https://drive.google.com/file/d/14pz7sNbrrS7v0q50qnEtrNTsaf0nr5xR/view?usp=sharing">Лабораторні роботи 1 семестр</a>
         </div>
+    </div>
+    <div class="compiler-list">
+        <h2>Топ компіляторів для виконання роботи</h2>
+        <ul class="compiler-links">
+            <li><a href="https://www.codeblocks.org/" target="_blank">Code::Blocks</a></li>
+            <li><a href="https://www.jetbrains.com/clion/" target="_blank">CLion</a></li>
+            <li><a href="https://visualstudio.microsoft.com/vs/features/cplusplus/" target="_blank">Visual Studio C++</a></li>
+            <li><a href="https://gcc.gnu.org/" target="_blank">GCC (GNU Compiler Collection)</a></li>
+            <li><a href="https://www.eclipse.org/" target="_blank">Eclipse IDE for C/C++ Developers</a></li>
+        </ul>
+    </div>
+</section>
+
+<section id="section3" class="section">
+    <div class="grid-container">
+        <div class="grid-item">
+            <a href="https://core.ac.uk/download/pdf/84273987.pdf" target="_blank">
+                <img src="photo_2024-02-25_12-28-19.jpg" height="420" width="275"/>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a href="https://lib.lntu.edu.ua/sites/default/files/2021-02/%D0%9F%D0%B5%D1%85_%D0%9B%D0%B0%D0%B2_%D0%94%D0%B5%D0%BB_%D0%93%D1%80%D0%B8%D0%BD_23_12.pdf" target="_blank">
+                <img src="photo_2024-02-25_13-21-00.jpg" height="420" width="275"/>
+            </a>
+        </div>
+    </div>
+    <div class="additional-books">
+        <hr>
+        <h3>Додаткова література</h3>
+        <a href="https://w3schoolsua.github.io/cpp/index#gsc.tab=0" class="book-link" target="_blank">C++ Підручник</a>
+        <a href="https://www.bestprog.net/uk/2019/01/13/examples-of-tasks-solving-on-recursion-in-the-c-programming-language-ua/" class="book-link" target="_blank">Приклади розвʼязку задач на рекурсію в C++</a>
+        <a href="https://purecodecpp.com/uk/" class="book-link" target="_blank">Основи програмування на C ++</a>
+        <!-- Додаткові посилання на книги -->
     </div>
 </section>
 
 <footer id="footer">
     <div class="footer-content">
         <p>&copy; 2024 Електронний посібник. Всі права захищені.</p>
+    </div>
+    <div class="back-to-top">
+        <a href="#top" onclick="backToTop()">на головну</a>
     </div>
 </footer>
 
